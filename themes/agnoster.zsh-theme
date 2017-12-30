@@ -214,7 +214,11 @@ prompt_status() {
   symbols=()
   [[ $RETVAL -ne 0 ]] && symbols+="%{%F{red}%}✘"
   [[ $UID -eq 0 ]] && symbols+="%{%F{yellow}%}⚡"
-  [[ $(jobs -l | wc -l) -gt 0 ]] && symbols+="%{%F{cyan}%}⚙"
+  # original
+  # [[ $(jobs -l | wc -l) -gt 0 ]] && symbols+="%{%F{cyan}%}⚙"
+
+  # Edit (juan): change gear icon 
+  # [[ $(jobs -l | wc -l) -gt 0 ]] && symbols+="%{%F{cyan}%}"
 
   [[ -n "$symbols" ]] && prompt_segment black default "$symbols"
 }
