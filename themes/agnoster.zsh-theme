@@ -80,7 +80,10 @@ prompt_end() {
 # Context: user@hostname (who am I and where am I)
 prompt_context() {
   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-    prompt_segment black default "%(!.%{%F{yellow}%}.)$USER@%m"
+    # Original
+    # prompt_segment black default "%(!.%{%F{yellow}%}.)$USER@%m"
+    # Edit (juan)
+    prompt_segment black default "%(!.%{%F{yellow}%}.)✊🏽 peepgame"
   fi
 }
 
@@ -118,8 +121,12 @@ prompt_git() {
     zstyle ':vcs_info:*' enable git
     zstyle ':vcs_info:*' get-revision true
     zstyle ':vcs_info:*' check-for-changes true
-    zstyle ':vcs_info:*' stagedstr '✚'
-    zstyle ':vcs_info:*' unstagedstr '●'
+    # original
+    # zstyle ':vcs_info:*' stagedstr '✚'
+    # zstyle ':vcs_info:*' unstagedstr '●'
+    # edit (juan)
+    zstyle ':vcs_info:*' stagedstr '✔️'
+    zstyle ':vcs_info:*' unstagedstr '🔥 '
     zstyle ':vcs_info:*' formats ' %u%c'
     zstyle ':vcs_info:*' actionformats ' %u%c'
     vcs_info
