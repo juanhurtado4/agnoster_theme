@@ -83,7 +83,9 @@ prompt_context() {
     # Original
     # prompt_segment black default "%(!.%{%F{yellow}%}.)$USER@%m"
     # Edit (juan)
-    prompt_segment black default "%(!.%{%F{yellow}%}.)✊🏽 peepgame"
+    # prompt_segment black default "%(!.%{%F{yellow}%}.)✊🏽 peepgame"
+    
+    prompt_segment black default "%(!.%{%F{yellow}%}.)⚡ "
   fi
 }
 
