@@ -190,7 +190,7 @@ prompt_hg() {
 prompt_dir() {
   # Trims path to last 2 directories
   # Stackoverflow link to full explanation: https://stackoverflow.com/questions/30323993/zsh-shorten-length-of-current-path/30507499#30507499
-  prompt_segment blue black '%2~'
+  prompt_segment cyan black '%2~'
 }
 
 # Virtualenv: current working virtualenv
